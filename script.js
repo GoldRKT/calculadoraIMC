@@ -1,3 +1,7 @@
+let botao = document.getElementById("btnCalcular");
+
+botao.addEventListener("click", calcularIMC);
+
 function calcularIMC() {
     console.log("A funcao foi executada!");
     let peso = document.getElementById("peso").value;
