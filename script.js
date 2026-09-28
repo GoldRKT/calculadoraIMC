@@ -1,5 +1,13 @@
 let botao = document.getElementById("btnCalcular");
 
+let popup = document.getElementById("classificacao");
+
+let fechar = document.getElementById("fechar");
+
+popup.style.display = "none";
+
+fechar.addEventListener("click", fecharPopup);
+
 botao.addEventListener("click", calcularIMC);
 
 function calcularIMC() {
@@ -10,21 +18,27 @@ function calcularIMC() {
     let imc = peso / (altura * altura);
     document.getElementById("resultado").innerHTML = imc.toFixed(2);
 
-    if(imc < 16.0){
+    if (imc < 16.0) {
         document.getElementById("indice").innerHTML = "Magreza Grave";
-    }else if (imc < 16.9){
+    } else if (imc < 16.9) {
         document.getElementById("indice").innerHTML = "Magreza Moderada";
-    }else if (imc < 18.4){
+    } else if (imc < 18.4) {
         document.getElementById("indice").innerHTML = "Magreza Leve";
-    }else if (imc < 24.9){
+    } else if (imc < 24.9) {
         document.getElementById("indice").innerHTML = "Peso Normal";
-    }else if (imc < 29.9){
+    } else if (imc < 29.9) {
         document.getElementById("indice").innerHTML = "Sobrepeso";
-    }else if (imc < 34.0){
+    } else if (imc < 34.0) {
         document.getElementById("indice").innerHTML = "Obesidade Grau I";
-    }else if (imc < 39.9){
+    } else if (imc < 39.9) {
         document.getElementById("indice").innerHTML = "Obesidade Grau II";
-    }else{
+    } else {
         document.getElementById("indice").innerHTML = "Obesidade Grau III";
     }
+
+    popup.style.display = "block";
+}
+
+function fecharPopup() {
+    popup.style.display = "none";
 }
