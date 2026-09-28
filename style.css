@@ -32,7 +32,7 @@ input {
     box-sizing: border-box;
     padding: 22px 28px;
     background-color: #0783a55d;
-    color: white;
+    color: #050a2a;
     border-radius: 10px;
     border: none;
     font-size: 30px;
@@ -41,7 +41,7 @@ input {
     cursor: pointer;
 }
 
-button {
+#btnCalcular {
     width: 50%;
     padding: 15px 30px;
     margin-top: 30px;
@@ -54,7 +54,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#btnCalcular:hover {
     background-color: #066f8c;
 }
 
@@ -65,3 +65,45 @@ button:hover {
     color: #123e49;
     margin-top: 50px;
 }
+
+#classificacao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: rgb(245, 245, 245);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: solid #050a2a;
+}
+
+#fechar {
+    width: auto;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #050a2a;
+    font-size: 22px;
+    float: right;
+}
+
+#fechar:hover {
+    background-color: transparent;
+    color: #0783a5;
+}
+
+#classificacao h3 {
+    color: #050a2a;
+    font-size: 28px;
+}
+
+#classificacao h5,
+#classificacao h6 {
+    font-size: 20px;
+    color: #131313;
+}
+
